@@ -3,7 +3,7 @@ const request = require('postman-request');
 const geoCode = (address, callback) => {
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
         encodeURIComponent(address) + 
-        '.json?access_token=pk.eyJ1IjoicmUtYi1lbCIsImEiOiJja2JveW5raGQwNGg1MnltcDFsbnVxdTd2In0.vZM2FyRiTWBi3ebQkyfirw&limit=1';
+        '.json?access_token=${ACCESS_TOKEN}&limit=1';
     
     request( {
         url,
